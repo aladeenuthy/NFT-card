@@ -1,0 +1,110 @@
+/*
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600
+*/
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+*::before, *::after{
+ box-sizing: border-box;
+}
+body{
+ background-color: hsl(217, 54%, 11%);
+ color: hsl(215, 51%, 70%);
+ position: relative;
+ font-family: 'Outfit', sans-serif;
+}
+p{
+ font-size: 18px;
+}
+
+main{
+ background-color: hsl(216, 50%, 16%);
+ width: 400px;
+ position: relative;
+ border-radius: 13px;
+ top: 50px;
+ padding-top: 27px;
+ padding-bottom: 22px;
+}
+main > div{
+ width: 85%;
+}
+.white-text{
+ color: #fff;
+}
+.white-text:hover{
+ color: hsl(178, 100%, 50%);
+ cursor: pointer;
+}
+#img-container{
+  position: relative;
+  cursor: pointer;
+}
+#image, #overlay-color{ 
+  border-radius: 10px;
+}
+#overlay-color, #overlay-image {
+  transition: 220ms ease-in;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#overlay-image{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  height: 60px;
+  width: initial;
+}
+#img-container:hover #overlay-color {
+  opacity: 0.62;
+  background-color: hsl(178, 100%, 50%);
+}
+#img-container:hover #overlay-image{
+  opacity: 1;
+}
+#split{
+ padding-bottom: 13px;
+ border-bottom: hsl(215, 32%, 27%) solid 1px;
+}
+main > div > div:last-child img{
+ border: #fff solid 1px;
+ border-radius: 50%;
+}
+
+
+
